@@ -9,6 +9,8 @@ import bus from '../assets/img/ekskursii-po-spb-na-avtobuse 1.png';
 import music from '../assets/img/music 1.png'
 
 const Layout = () => {
+
+
     const cards =
         [{
             img_main: st_peterburg,
@@ -107,26 +109,16 @@ const Layout = () => {
         cards.map(i => {
 
 
-            function renderTime(array) {
-                if (array.length > 4) {
-                    return <div className={'timeTrack'} >
-                        <p>{array[0]}</p>
-                        <p>{array[1]}</p>
-                        <p>{array[2]}</p>
-                        <div><p>Еще...</p></div>
-                    </div>
-                } else {
-                    return <>
-                        {array[0] !== undefined ? <p>{array[0]}</p> : ''}
-                        {array[1] !== undefined ? <p>{array[0]}</p> : ''}
-                        {array[2] !== undefined ? <p>{array[0]}</p> : ''}
-                        {array[3] !== undefined ? <p>{array[0]}</p> : ''}
-                    </>
-
-                }
-
+            function clickFunction (evt) {
+                evt.currentTarget.style.display = 'none';
+                evt.currentTarget.className = 'more_hidden';
 
             }
+
+
+
+
+
 
 
             const styles = {
@@ -168,8 +160,26 @@ const Layout = () => {
                             className={'bonus'}>{i.time}</p></div>
                         <div className={'check_in'}>
                             {
-                                 renderTime(i.check_in)
-                            }
+
+                                   i.check_in.length > 4?  <>
+                                            <p>{i.check_in[0]}</p>
+                                            <p>{i.check_in[1]}</p>
+                                            <p>{i.check_in[2]}</p>
+                                            <p className={'more'} onClick={clickFunction}>Еще...</p>
+                                       {i.check_in.map((b, index) => {
+                                           if (index  > 2) {
+                                               return <p>{b}</p>
+                                           }
+                                       })}
+                                        </>
+
+                                        : i.check_in.map(a => {
+                                            return <p>{a}</p>
+                                        })
+                                    }
+
+
+
 
 
                         </div>
