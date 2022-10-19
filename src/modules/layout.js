@@ -9,8 +9,6 @@ import bus from '../assets/img/ekskursii-po-spb-na-avtobuse 1.png';
 import music from '../assets/img/music 1.png'
 
 const Layout = () => {
-
-
     const cards =
         [{
             img_main: st_peterburg,
@@ -30,7 +28,6 @@ const Layout = () => {
             check_in: ['12.00', '12.00', "12.00", '12.00', "12.00", "12.00", "12.00", "12.00", "12.00"],
             price: '900',
             onPier: 'На причале 1200 р'
-
         }, {
             img_main: st_peterburg,
             img_watches: watches,
@@ -101,25 +98,12 @@ const Layout = () => {
             price: '900',
             onPier: 'На причале 1200 р'
         }]
-
-
     return (
-
-
-        cards.map(i => {
-
-
-            function clickFunction (evt) {
+        cards.map((i, index) => {
+            function clickFunction(evt) {
                 evt.currentTarget.style.display = 'none';
                 evt.currentTarget.className = 'more_hidden';
-
             }
-
-
-
-
-
-
 
             const styles = {
                 position: 'absolute',
@@ -139,7 +123,7 @@ const Layout = () => {
                 fontSize: '14px',
                 lineHeight: '20px'
             }
-            return <div className={'layout'} key={i.background_color}>
+            return <div className={'layout'} key={index}>
                 <img src={i.img_main} alt={'st.peterburg'} width={341} height={220} className={'main_image'}/>
                 <p className={'new'} style={styles}>{i.whatIsIt}</p>
                 <div className={'container'}>
@@ -154,37 +138,29 @@ const Layout = () => {
                         className={'bonus'}>{i.bonus2}</p></div>
                     <div className={'check'}><img src={i.img} alt={'chek'} width={16} height={12}/> <p
                         className={'bonus'}>{i.bonus3}</p></div>
-
                     <div className={'check_container'}>
                         <div className={'check'}><img src={i.img} alt={'chek'} width={16} height={12}/> <p
                             className={'bonus'}>{i.time}</p></div>
                         <div className={'check_in'}>
                             {
+                                i.check_in.length > 4 ? <>
+                                        <p>{i.check_in[0]}</p>
+                                        <p>{i.check_in[1]}</p>
+                                        <p>{i.check_in[2]}</p>
+                                        <p className={'more'} onClick={clickFunction}>Еще...</p>
+                                        {i.check_in.map((b, index) => {
+                                            if (index > 2) {
+                                                return <p key={index}>{b}</p>
+                                            }
+                                        })}
+                                    </>
 
-                                   i.check_in.length > 4?  <>
-                                            <p>{i.check_in[0]}</p>
-                                            <p>{i.check_in[1]}</p>
-                                            <p>{i.check_in[2]}</p>
-                                            <p className={'more'} onClick={clickFunction}>Еще...</p>
-                                       {i.check_in.map((b, index) => {
-                                           if (index  > 2) {
-                                               return <p>{b}</p>
-                                           }
-                                       })}
-                                        </>
-
-                                        : i.check_in.map(a => {
-                                            return <p>{a}</p>
-                                        })
-                                    }
-
-
-
-
-
+                                    : i.check_in.map((a, index) => {
+                                        return <p key={index}>{a}</p>
+                                    })
+                            }
                         </div>
                     </div>
-
                     <div>
                         <div className={i.onPier ? 'price' : 'price-pier'}>
                             <div className={'price_coop'}>
@@ -194,10 +170,7 @@ const Layout = () => {
                             <button>Подробнее</button>
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
         })
     );

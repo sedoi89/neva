@@ -3,7 +3,6 @@ import MOCKS from '../mocks/moks'
 
 const Js1 = () => {
 
-
     return (
         <div className={'table'}>
             <table>
@@ -65,7 +64,7 @@ const Js1 = () => {
                             {i.created}
                         </td>
                         <td>
-                            {i.special? i.special : 'false'}
+                            {i.special ? i.special : 'false'}
                         </td>
                     </tr>
                 })}

@@ -4,23 +4,20 @@ import Js1 from "./modules/js1";
 import Nav from "./modules/nav";
 import Js from "./modules/js";
 import Layout from "./modules/layout";
+import Layout2 from "./modules/layout2";
 
 
 function App() {
   return (
-
-
           <BrowserRouter>
               <Nav/>
               <Routes>
-                  <Route path={'/'} element={<Js1/>}/>
+                  <Route path={'/'} element={<Layout/>}/>
+                  <Route path={'/layout2'} element={<Layout2/>}/>
                   <Route path={'/JavaScript'} element={<Js/>}/>
-                  <Route path={'/layout'} element={<Layout/>}/>
-
+                  <Route path={'/table'} element={<Js1/>}/>
               </Routes>
           </BrowserRouter>
-
-
   );
 }
 

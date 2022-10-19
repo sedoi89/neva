@@ -2,38 +2,43 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-
 }
+
 #root {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
+
 .nav {
     margin-bottom: 20px;
     align-self: flex-start;
     grid-column-start: 1;
 }
+
 .table {
     text-align: center;
     justify-content: center;
     grid-row-start: 2;
     grid-column-start: 2;
-
 }
+
 .table table td {
     padding: 5px;
     border: 1px solid black;
 }
-.table table  {
+
+.table table {
     border-collapse: collapse;
 
 }
+
 .layout {
 
     font-family: 'Open Sans';
@@ -41,13 +46,14 @@ body {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
-position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     border: 0.3px solid #828282;
     border-radius: 16px;
     margin: 10px 10px;
 }
+
 .layout h2 {
     margin: 0 12px;
     font-family: 'Open Sans';
@@ -57,6 +63,7 @@ position: relative;
     line-height: 22px;
     margin-bottom: 15px;
 }
+
 .bonus {
     font-family: 'Open Sans';
     font-style: normal;
@@ -65,11 +72,12 @@ position: relative;
     line-height: 20px;
     min-width: 160px;
 }
+
 .time {
     display: flex;
     align-items: center;
     margin-left: 12px;
-    color:  #9E9E9E;
+    color: #9E9E9E;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -77,8 +85,8 @@ position: relative;
     line-height: 20px;
     margin-bottom: 15px;
     margin-top: 14px;
-;
 }
+
 .time img {
     margin-right: 9px;
 }
@@ -110,13 +118,11 @@ position: relative;
     align-items: center;
     width: 63px;
     height: 24px;
-    background-color:  #D9E8FF;
+    background-color: #D9E8FF;
     border-radius: 11px;
     margin-right: 4px;
     margin-bottom: 35px;
 }
-
-
 
 .price {
     font-family: 'Open Sans';
@@ -128,6 +134,7 @@ position: relative;
     display: flex;
     margin-bottom: 24px;
 }
+
 .price-pier {
     font-family: 'Open Sans';
     font-style: normal;
@@ -138,36 +145,38 @@ position: relative;
     display: flex;
     margin-bottom: 24px;
     align-items: center;
-
 }
- button {
+
+button {
     background: #FED74B;
     border: 0.5px solid #CBA500;
     border-radius: 10px;
     width: 193px;
     height: 44px;
-     font-family: 'Open Sans';
-     font-style: normal;
-     font-weight: 400;
-     font-size: 14px;
-     line-height: 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
 }
+
 button:hover {
     cursor: pointer;
 }
 
- .price p {
-     font-family: 'Open Sans';
-     font-style: normal;
-     font-weight: 400;
-     font-size: 10px;
-     line-height: 11px;
- }
- .check_in p:hover {
-     background: #6BA6FF;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-     cursor: pointer;
- }
+.price p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+.check_in p:hover {
+    background: #6BA6FF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
 
 .price_coop {
     margin-right: 20px;
@@ -182,6 +191,7 @@ button:hover {
     display: flex;
     border: 1px solid black;
 }
+
 .timeTrack {
     display: flex;
 }
@@ -194,21 +204,23 @@ button:hover {
 .check_in .more ~ p {
     display: none;
 }
+
 .check_in .more_hidden ~ p {
     display: flex
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 4000px) {
     .container {
         display: flex;
         flex-direction: column;
         max-width: 1070px;
-
     }
+
     .layout {
         flex-direction: row;
-       max-width: 1070px;
+        max-width: 1070px;
     }
+
     .layout h2 {
         margin-top: 16px;
         font-family: 'Open Sans';
@@ -219,27 +231,34 @@ button:hover {
         margin-bottom: 11px;
         margin-left: 23px;
     }
+
     .time {
         margin: 0 23px;
     }
+
     .check {
         height: 23px;
         margin-left: 23px;
     }
+
     .main_image {
-        width: 473px ;
+        width: 473px;
         height: 369px;
         border-radius: 0 0 0 15px;
     }
+
     .check_container {
         display: flex;
     }
+
     .check_in {
         margin-left: 15px;
     }
+
     .check_in p {
         margin-top: 0;
     }
+
     button {
         border-radius: 23px;
         width: 187px;
@@ -250,11 +269,25 @@ button:hover {
         font-size: 18px;
         line-height: 20px;
     }
+
     .round {
         position: absolute;
         left: 440px;
         top: 144px;
 
+    }
+
+    .blog {
+        position: relative;
+        margin: 0 auto;
+        padding: 20px 15px;
+        width: 990px;
+        max-width: 95%;
+        background-color: #fff;
+    }
+
+    .blog table tbody {
+        font-size: 100%;
     }
 }
 
@@ -264,15 +297,18 @@ button:hover {
         flex-direction: column;
 
     }
+
     .layout {
         max-width: 341px;
         flex-direction: column;
 
     }
+
     .time {
         position: absolute;
         top: 233px;
     }
+
     .layout h2 {
         margin-top: 49px;
         font-family: 'Open Sans';
@@ -281,17 +317,21 @@ button:hover {
         font-size: 14px;
         line-height: 22px;
     }
+
     .check {
         height: auto;
     }
+
     .main_image {
-        width: 341px ;
+        width: 341px;
         height: 220px;
     }
+
     .check_container {
         display: flex;
         flex-direction: column;
     }
+
     button {
         border-radius: 10px;
         width: 193px;
@@ -302,18 +342,52 @@ button:hover {
         font-size: 14px;
         line-height: 20px;
     }
+
     .round {
         position: absolute;
         left: 326px;
         top: 79px;
 
     }
+
     .check_in {
         margin-left: 57px;
     }
+
     .main_image {
         border-radius: 0 0 0 0;
     }
+
+    .blog {
+        position: relative;
+        margin: 0 auto;
+        padding: 20px 0;
+        width: 990px;
+        max-width: 95%;
+        background-color: #fff;
+    }
+
+    .blog table tbody {
+        font-size: 10px;
+    }
 }
 
+.select {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.select label {
+    min-width: 500px;
+}
+
+.select input, select {
+
+    border: 1px solid #6BA6FF;
+    border-radius: 5px;
+}
 
